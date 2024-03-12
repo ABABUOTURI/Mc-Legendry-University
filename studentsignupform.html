@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: #fff;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+            background: cornflowerblue;
+            border: 1px solid black;
+        }
+
+        form {
+            margin: 5% auto;
+            max-width: 600px;
+            background-color: cornflowerblue;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 5px 2px 5px rgb(77, 5, 5);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        h5 {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: brown;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #8B0000;
+        }
+
+        .register {
+            text-align: center;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .error-message {
+            display: none;
+            background-color: #f44336;
+            color: white;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        @media screen and (min-width: 768px) {
+            form {
+                max-width: 800px;
+            }
+
+            input, select {
+                width: 48%;
+                margin-right: 2%;
+                margin-bottom: 15px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            form {
+                max-width: 1000px;
+            }
+
+            input, select {
+                width: 32%;
+                margin-right: 2%;
+                margin-bottom: 15px;
+            }
+
+            .btn {
+                width: 30%;
+                margin-left: 35%;
+            }
+        }
+    </style>
+</head>
+<body>
+<form action="" name="regform" method="post" onsubmit="return validateForm()">
+    <fieldset>
+        <h2><em>REGISTER</em></h2>
+        <h2><em><u>Kindly fill in the form to register</u></em></h2>
+        <div>
+            <h1>Student's Photo. <img id="img" src="Choose.png" height="120px" width="120px"> </h1>
+        </div>
+        <input id="input" type="file">
+        <br><br><br>
+        <div id="row">
+            <label for="studentsname">Student's Name:</label>
+            <input type="text" id="studentsname" name="studentname" placeholder="Enter Student Name" required>
+            <label for="parentsname">Parent's/Guardian's Name:</label>
+            <input type="text" id="parentsname" name="parentname" required placeholder="Enter parent/guardian name">
+        </div>
+        <hr>
+        <div id="row">
+            <label for="studentsnumber">Student's Phone No:</label>
+            <input type="tel" id="studentsnumber" name="studentnumber" placeholder="079" required>
+            <label for="studentsemail">Student's Email:</label>
+            <input type="email" id="studentsemail" name="studentemail" placeholder="xyz@gmail.com" required>
+        </div>
+        <hr>
+        <div id="row">
+            <label for="parentsnumber">Parent's/Guardian's Phone No:</label>
+            <input type="tel" id="parentsnumber" name="parentnumber" placeholder="079" required>
+            <label for="studentsnationalid">Student's National ID:</label>
+            <input type="text" id="studentsnationalid" name="studentnationalid" placeholder="National ID" required>
+        </div>
+        <hr>
+        <div id="row">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">-Select One-</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="dob">D.O.B:</label>
+            <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Address" required>
+        </div>
+        <hr>
+        <div id="row">
+            <label for="campus">Campus:</label>
+            <select id="campus" name="campus" required>
+                <option value="">-Select One-</option>
+                <option value="Nakuru">Nakuru</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Rwanda">Rwanda</option>
+            </select>
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">-Select One-</option>
+                <option value="School Of Business & Economics">School Of Business & Economics</option>
+                <option value="School Of Science, Engineering & Technology">School Of Science, Engineering & Technology</option>
+                <option value="School Of Education, Humanities & Social Sciences">School Of Education, Humanities & Social Sciences</option>
+                <option value="School Of Law">School Of Law</option>
+                <!-- Add more options here -->
+            </select>
+        </div>
+        <hr>
+        <div id="row">
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">-Select One-</option>
+                <option value="">Information Technology</option>
+                <!-- Add more course options here -->
+            </select>
+            <label for="regno">Reg No:</label>
+            <input type="text" id="regno" name="regno" required minlength="8" maxlength="8" placeholder="8-digit Reg No">
+        </div>
+        <hr>
+        <div id="row">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="*****" required minlength="8">
+            <input type="checkbox" id="showPassword">
+            <label for="showPassword">Show Password</label>
+            <label for="password2">Confirm Password:</label>
+            <input type="password" id="password2" name="password2" placeholder="*****" required minlength="8">
+            <input type="checkbox" id="showPassword2">
+            <label for="showPassword2">Show Password</label>
+        </div>
+        <hr><br>
+        <button type="submit" class="btn">Register</button>
+        <h5 class="register">Already have an Account? <a href="studentloginform.html" target="_blank">Login</a></h5>
+        <div class="success-message" id="successMessage">Account created successfully!</div>
+        <div class="error-message" id="errorMessage">An error occurred. Please try again later.</div>
+    </fieldset>
+</form>
+<script>
+    let img = document.getElementById('img');
+    let input = document.getElementById('input');
+
+    input.onchange = (e) => {
+        if (input.files[0])
+            img.src = URL.createObjectURL(input.files[0]);
+    };
+
+    let showPassword = document.getElementById('showPassword');
+    let password = document.getElementById('password');
+
+    showPassword.onclick = () => {
+        if (showPassword.checked)
+            password.type = "text";
+        else
+            password.type = "password";
+    };
+
+    let showPassword2 = document.getElementById('showPassword2');
+    let password2 = document.getElementById('password2');
+
+    showPassword2.onclick = () => {
+        if (showPassword2.checked)
+            password2.type = "text";
+        else
+            password2.type = "password";
+    };
+
+    function validateForm() {
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("password2").value;
+        if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return false;
+        }
+
+        // Simulating success and error messages
+        let successMessage = document.getElementById("successMessage");
+        let errorMessage = document.getElementById("errorMessage");
+
+        // Assuming successful registration for demonstration
+        // In a real scenario, this would be an AJAX request to a server
+        let isRegistrationSuccessful = true; // Change this to test error message
+
+        if (isRegistrationSuccessful) {
+            successMessage.style.display = "block";
+            setTimeout(function() {
+                successMessage.style.display = "none";
+            }, 2000);
+        } else {
+            errorMessage.style.display = "block";
+            setTimeout(function() {
+                errorMessage.style.display = "none";
+            }, 2000);
+        }
+
+        // For this demonstration, returning false to prevent actual form submission
+        return false;
+    }
+</script>
+</body>
+</html>

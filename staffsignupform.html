@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff Registration Form</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(5, 19, 73, 0.7), rgba(5, 19, 73, 0.7)), url(img/admn\ 1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 20px;
+        }
+
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+            background: cornflowerblue;
+            border: 1px solid black;
+        }
+
+        form {
+            margin: 5% auto;
+            max-width: 400px;
+            background-color: cornflowerblue;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 5px 2px 5px rgb(77, 5, 5);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        h5 {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: brown;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #8B0000;
+        }
+
+        .register {
+            text-align: center;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .error-message {
+            display: none;
+            background-color: #f44336;
+            color: white;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        @media screen and (min-width: 768px) {
+            form {
+                max-width: 600px;
+            }
+
+            input, select {
+                width: 48%;
+                margin-right: 2%;
+                margin-bottom: 15px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            form {
+                max-width: 800px;
+            }
+
+            input, select {
+                width: 32%;
+                margin-right: 2%;
+                margin-bottom: 15px;
+            }
+
+            .btn {
+                width: 30%;
+                margin-left: 35%;
+            }
+        }
+    </style>
+</head>
+<body>
+<form id="registrationForm" onsubmit="return handleRegistration()">
+    <fieldset>
+        <h2><em>REGISTER</em></h2>
+        <h2><em><u>Kindly fill in the form to register</u></em></h2>
+        <div>
+            <h1>Staff's Photo. <img id="img" src="Choose.png" height="120px" width="120px"> </h1>
+        </div>
+        <input id="input" type="file">
+        <br><br><br>
+        <div id="row">
+            <label for="staffsname">Staff's Name:</label>
+            <input type="text" id="staffsname" name="staffsname" placeholder="Enter Staff Name" required>
+            <label for="staffsphone">Staff's Phone No:</label>
+            <input type="tel" id="staffsnumber" name="staffsnumber" placeholder="079******" required>
+        </div>
+        <hr>
+        <div id="row">
+            <label for="staffsemail">Staff's Email:</label>
+            <input type="email" id="staffsemail" name="staffsemail" placeholder="xyz@gmail.com" required>
+            <label for="staffsnationalid">Staff's National Id:</label>
+            <input type="text" id="staffsnationalid" name="staffsnationalid" placeholder="40******" required>
+        </div>
+        <hr>
+        <div id="row">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">-Select One-</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="dob">D.O.B:</label>
+            <input type="text" id="dob" name="dob" placeholder="dd/mm/yy" required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Zip Code" required>
+        </div>
+        <hr>
+        <div id="row">
+            <label for="campus">Campus:</label>
+            <select id="campus" name="campus" required>
+                <option value="">-Select One-</option>
+                <option value="nakuru">Nakuru</option>
+                <option value="nairobi">Nairobi</option>
+                <option value="rwanda">Rwanda</option>
+            </select>
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">-Select One-</option>
+                <option value="teaching">Teaching Staff</option>
+                <option value="non-teaching">Non-Teaching Staff</option>
+            </select>
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="">-Select One-</option>
+                <option value="phd_business_admin">Doctor of Philosophy in Business Administration</option>
+                <!-- Other options removed for brevity -->
+            </select>
+        </div>
+        <hr>
+        <div id="row">
+            <label for="staffsno">Staff No:</label>
+            <input type="text" id="staffsno" name="staffsno" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="*****" required>
+            <label for="confirmPassword">Confirm:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="*****" required>
+        </div>
+        <hr><br><br>
+        <button type="submit" class="btn">Register</button><br>
+        <h5 class="register">Already have an Account? <a href="staffloginform.html">Login</a></h5>
+        <div class="success-message" id="successMessage">Registration successful!</div>
+        <div class="error-message" id="errorMessage">Please fill in all fields correctly.</div>
+    </fieldset>
+</form>
+
+<script>
+    function handleRegistration() {
+        let staffsname = document.getElementById('staffsname').value;
+        let staffsnumber = document.getElementById('staffsnumber').value;
+        let staffsemail = document.getElementById('staffsemail').value;
+        let staffsnationalid = document.getElementById('staffsnationalid').value;
+        let gender = document.getElementById('gender').value;
+        let dob = document.getElementById('dob').value;
+        let address = document.getElementById('address').value;
+        let campus = document.getElementById('campus').value;
+        let department = document.getElementById('department').value;
+        let category = document.getElementById('category').value;
+        let staffsno = document.getElementById('staffsno').value;
+        let password = document.getElementById('password').value;
+        let confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Check if all fields are filled
+        if (
+            !staffsname ||
+            !staffsnumber ||
+            !staffsemail ||
+            !staffsnationalid ||
+            !gender ||
+            !dob ||
+            !address ||
+            !campus ||
+            !department ||
+            !category ||
+            !staffsno ||
+            !password ||
+            !confirmPassword
+        ) {
+            showErrorMessage("Please fill in all fields.");
+            return false;
+        }
+
+        // Check if passwords match
+        if (password !== confirmPassword) {
+            showErrorMessage("Passwords do not match.");
+            return false;
+        }
+
+        // Simulate successful registration
+        showSuccessMessage("Registration successful, " + staffsname + "!");
+        // Prevent form submission
+        return false;
+    }
+
+    function showSuccessMessage(message) {
+        let successMessage = document.getElementById('successMessage');
+        let errorMessage = document.getElementById('errorMessage');
+
+        successMessage.innerText = message;
+        successMessage.style.display = 'block';
+
+        errorMessage.style.display = 'none';
+
+        // Hide the success message after 2 seconds
+        setTimeout(function () {
+            successMessage.style.display = 'none';
+        }, 2000);
+    }
+
+    function showErrorMessage(message) {
+        let successMessage = document.getElementById('successMessage');
+        let errorMessage = document.getElementById('errorMessage');
+
+        errorMessage.innerText = message;
+        errorMessage.style.display = 'block';
+
+        successMessage.style.display = 'none';
+    }
+</script>
+</body>
+</html>

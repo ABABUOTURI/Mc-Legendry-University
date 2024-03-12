@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(rgba(5, 19, 73, 0.7), rgba(5, 19, 73, 0.7)), url(img/graduation2.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        form {
+            margin: 7% 5%;
+            background-color: cornflowerblue;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .head {
+            background-color: brown;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .head h1 {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .head p {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 100;
+            color: gold;
+            margin: 0;
+        }
+
+        .head h2 {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 0;
+        }
+
+        .img1, .img2, .img3 {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            border: 2px solid #fff;
+            margin: 0 auto;
+        }
+
+        label {
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        input {
+            border-radius: 5px;
+            padding: 8px 5px;
+            width: 90%;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            margin: 20px auto;
+            padding: 15px 35px;
+            border: 2px;
+            border-radius: 5px;
+            display: block;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: brown;
+            color: #fff;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Arrange gender checkboxes in a row */
+        .gender-checkboxes, .disability-checkboxes label{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width: 768px) {
+            form {
+                width: 70%;
+                margin: 7% auto;
+            }
+
+            .head {
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            .img1, .img2, .img3 {
+                float: left;
+                margin-right: 20px;
+            }
+
+            #input {
+                float: right;
+                margin-right: 20px;
+            }
+
+            .gender-checkboxes label, .disability-checkboxes label {
+                margin-right: 10px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            form {
+                width: 50%;
+                margin: 7% auto;
+            }
+
+            .head {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            .img1, .img2, .img3 {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        #div1 h1, p, h4, h2, h3{
+text-align: center;
+font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+        <div id="div1">
+            <h1>Mc Legendry University.</h1>
+        <p><em>A Center Of Education.</em></p>
+        <h4>Mc Legendry University is ISO 9001:2015 Certified.</h4>
+        <h4><em>Main Campus-Nakuru, Moi Avenue</em></h4>
+        <h4>Contact No: +254714205641 / +254769856267</h4>
+        <h2>ADMISSION FORM</h2>
+        </div>
+        <div class="pic">
+            <img class="img1" id="img" src="Choose.png"><br>
+            <input style="margin-left: 5%;" id="input" type="file" ><br>
+            <h3 ">Student Photo.</h3>
+        </div>
+    </div>
+    <br>
+    <fieldset style="border: 3px dotted rgb(77, 5, 5);box-shadow: 2px 2px 2px 2px rgb(77, 5, 5);">
+        <div id="row"></div>
+        <label for="name1">Student's Name:</label><input type="text" id="studentname" name="studentname"
+                                                          placeholder="Enter Student Name" required> <label
+                for="studentphone">Student's Phone No:</label> <input type="tel" id="studentnumber" name="studentnumber"
+                                                                     required><br><br>
+        <label for="name2">Parent's Name:</label><input type="text" id="parentntname" name="parentname"
+                                                         placeholder="Enter Parent Name" required> <label
+                for="parentntphone">Parent's Phone No:</label> <input type="number" id="parentnumber" name="parentnumber"
+                                                                     required min="0"><br><br>
+    <label for="name1">D.OB:</label><br><input type="datetime-local" id="dob" name="dob" required> <label
+                for="gender">Gender:</label>
+        <div class="gender-checkboxes">
+            <label for="male">Male:</label><input type="checkbox" id="male" name="gender">
+            <label for="female">Female:</label><input type="checkbox" id="female" name="gender">
+            <label for="others">Others:</label><input type="checkbox" id="others" name="gender" required>
+        </div>
+        <br><br>
+        <caption id="caption" style="color: #110010;"><em
+                    style="margin-left: 5%;font-weight: bold;">Present Address.</em> </caption>
+        <fieldset id="present"><br><br>
+            <label for="county">County:</label><input type="text" id="county" name="county"><label for="county">Sub-County:</label><input
+                    type="text" id="subcounty" name="subcounty" required><br><br>
+            <label for="address">Address:</label><input type="number" id="address2" name="address2"><br><br>
+        </fieldset><br><br>
+        <label for="name3">Religion:</label><input type="text" id="religion" name="religion"
+                                                   placeholder="Enter Your Religion" required> <label
+                for="studentphone">Nationality:</label> <input type="text" id="nationality" name="nationality"
+                                                                placeholder="KENYAN" required><br><br>
+        <label for="number">ID No:</label><br><input type="number" id="idno" name="idno" placeholder="Enter Your ID No"
+                                                  required> <label for="studentemail">Student's Email:</label> <input
+                type="email" id="studentnumber" name="studentnumber" placeholder="xyz@" required><br><br>
+        <label for="name4">Course Name:</label><input type="text" id="coursename" name="coursename"
+                                                        placeholder="Enter Course Name" required><br> <label
+                for="bloodgroup">Blood Group:</label> <br><input type="text" id="bloodgroup" name="bloodgroup"
+                                                              placeholder="B+" required><br><br>
+        <caption id="caption" style="color: #110010;"><em
+                    style="margin-left: 5%;font-weight: bold;">Health History.</em> </caption>
+        <fieldset id="present" class="disability-checkboxes label"><br><br>
+            <label for="name5">Any Disabilities:</label> Yes:<input type="checkbox" id="health" name="health">No:<input
+                    type="checkbox" id="health" name="health"><br><br>
+            <label for="name6">If Yes, briefly tell us your condition:</label><input type="text" id="health1"
+                                                                                        name="health2"><br><br>
+        </fieldset><br><br>
+        <br><br><br>
+        <h4><em><u>DECLARATION BY THE APPLICANT.</u></em></h4><br><br>
+        <label for="name7">I, </label><input type="text" id="health1" name="health2" placeholder="Applicant Name"
+                                              required> Confirm that the above Information is correct<br>
+        and to best of my knowledge and belief. I am also ready to follow regulations of the school. <br><br>
+        <label for="date">Date:</label><input type="datetime-local" id="date" name="date" required><br><br><hr>
+        <input class="btn" type="button" value="SUBMIT"><br><br><hr>
+        <p style="text-align: center;"><em>Mc Legendry University is ISO 9001:2015 Certified.</em></p>
+    </div>
+    </fieldset>
+</form>
+<script>
+    let img = document.getElementById('img');
+    let input = document.getElementById('input');
+
+    input.onchange = (e) => {
+        if (input.files[0])
+            img.src = URL.createObjectURL(input.files[0]);
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Student Library Login</title>
+        <style>
+            body{
+                background-image: linear-gradient(rgba(5, 19, 73, 0.7),rgba(5, 19, 73, 0.7)), url(img/lib2.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #input{
+                align-items: center;
+            }
+            #row{
+                justify-content: space-around;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                flex: 2 2 80px;
+                margin-top: 5%;
+            }
+            .btn{
+                margin-left: 45%;
+                padding: 15px 35px;
+                border: 2px;
+                border-radius: 20px;
+                box-shadow: 2px 5px 2px 5px rgb(77, 5, 5);
+            }
+            h5{
+                text-align: center;
+                font-size: 16px;
+            }
+            input{
+                border-radius: 20px;
+                padding: 8px 5px;
+                margin: 30px;
+            }
+            select{
+                border-radius: 20px;
+                padding: 2px 5px;
+            }
+            h2{
+                text-align: center;
+                font-size: 16px;
+            }
+            form{
+                margin: 30px;
+                margin-left: 25%; 
+                margin-right: 25%;
+                background-color:turquoise;
+            }
+            .btn:hover{
+                scale: 1.2s;
+                background-color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+           <fieldset style="filter:drop-shadow(2px 5px 2px rgb(77, 5, 5));">
+            <h2><em><u>LOGIN.</u></em></h2>
+            <label for="name">RegNo:</label>
+            <input type="text & name" required=""><br>
+            <label for="password">Password:</label>
+            <input type="password" placeholder="*****" required=""><br> 
+            <label for="password2">Confirm:</label>
+            <input type="password" placeholder="*****" required=""><br>
+            <hr><br><br>
+           <a href="#"> <button class="btn">Login</button></a><br>
+            <h5 class="register">Don't have an Account? <a href="StudentSignup2.html" target="_self">Sign Up</a></h5>
+        
+        </fieldset>
+        </form>
+        <script>
+            let img = document.getElementById('img');
+            let input = document.getElementById('input');
+
+            input.onchange = (e) =>{
+                if (input.files[0])
+                img.src = URL.createObjectURL(input.files[0]);
+            };
+        </script>
+    </body>
+</html>

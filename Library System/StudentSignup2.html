@@ -1,0 +1,204 @@
+<html>
+    <head>
+        <title>Student Registration Form</title>
+        <style>
+            body{
+                background-image: linear-gradient(rgba(5, 19, 73, 0.7),rgba(5, 19, 73, 0.7)), url(img/lib2.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            img{
+                border-radius: 50%;
+                object-fit: cover;
+                background:cornflowerblue;
+                border: 1px solid black;
+            }
+            #input{
+                align-items: center;
+            }
+            #row{
+                justify-content: space-around;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                flex: 2 2 80px;
+                margin-top: 5%;
+            }
+            .btn{
+                margin-left: 45%;
+                padding: 15px 35px;
+                border: 2px;
+                border-radius: 20px;
+                box-shadow: 2px 5px 2px 5px rgb(77, 5, 5);
+            }
+            h5{
+                text-align: center;
+                font-size: 16px;
+            }
+            input{
+                border-radius: 20px;
+                padding: 8px 5px;
+            }
+            select{
+                border-radius: 20px;
+                padding: 1px 1px;
+            }
+            h2{
+                text-align: center;
+                font-size: 14px;
+            }
+            form{
+                margin-top: 7%;
+                margin-left: 18%;
+                margin-right: 18%;
+                background-color:turquoise;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" name="regform" method="post" style="filter:drop-shadow(2px 5px 2px rgb(77, 5, 5));">
+           <fieldset >
+            <h2><em>REGISTER.</em></h2>
+            <h2><em><u>Kindly fill in the form to register to the Library System.</u></em></h2>
+            <div id="row">
+            <label for="student'sname">Student's<br> Name:</label> <input type="text" id="studentsname" name="studentname" placeholder="Enter Student Name" required="name"> <label for="student'semail">Student's<br> Email: </label><input type="email" id="studentsemail" name="studentemail" placeholder="xyz@gmail.com" required="email"><br>
+        </div>
+        <hr>
+            <div id="row">
+            <label for="gender">Gender:</label><select size="" name="D2">
+            <option>-Select One-</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option> </select><label for="regno">Reg No:</label><input type="text & number" id="regsno" name="reg'sno" required=""> <label for="dob">D.O.B:</label><input type="number & text" placeholder="dd/mm/yy" required="number"><br>
+        </div><hr>
+            <div id="row">
+            <label for="campus">Campus:</label><select id="campus" size="" name="D2">
+                <option>-Select One-</option>
+                <option>Nakuru.</option>
+                <option>Nairobi.</option>
+                <option>Rwanda.</option> </select><label for="department">Department:</label> <select id="department" size="" name="D2">
+                    <option>-Select One-</option>
+                    <option>School Of Business & Economics.</option>
+                    <option>School Of Science, Engineering & Technology.</option>
+                    <option>School Of Education, Humanities & Social Sciences.</option>
+                    <option>School Of Law.</option>
+                    <option>School Of Medicine & Health Sciences.</option>
+                    <option>School Of Pharmacy.</option>
+                    <option>School Of Music & Media.</option></select> 
+                </div><hr><br>
+                    <div id="row">
+                    <label for="course">Course:</label><select id="course" size="" name="D2">
+                        <option>-Select One-</option>
+                        <option>Doctor of Philosophy in Business Administration.</option>
+                        <option>Doctor of Philosophy in Fianance.</option>
+                        <option>Master of Science in Finance.</option>
+                    <option>Master of Business Administration.</option>
+                    <option>Master of Science in Project Management.</option>
+                    <option>Master of Science in Human Resource Management.</option>
+                    <option>Master of Organizational Development.</option>
+                    <option>Bachelor of Hospitality Management.</option>
+                    <option>Bachelor of Business Management & IT.</option>
+                    <option>Bachelor of Business IT.</option>
+                    <option>Bachelor of Commerce.</option>
+                    <option>Bachelor of Management Information Systems.</option>
+                    <option>Bachelor of Science in Economics.</option>
+                    <option>Bachelor of Science in Economics & Statistics.</option>
+                    <option>Bachelor of Procurement & Logistics Management.</option>
+                    <option>Bachelor of Science in Economics & Finance.</option>
+                    <option>Bcahelor of Science in Agribusiness Management.</option>
+                    <option>Diploma in Business Administration.</option>
+                    <option>Diploma in Procurement & Logistics Management.</option>
+                    <option>Diploma in Business Management.</option>
+                    <option>Diploma in Business IT.</option>
+                    <option>Diploma in Human Resource Management.</option>
+                    <option>Diploma in Hospitality Management.</option>
+                    <option>Diploma in Tourism Management.</option>
+                    <option>Diploma in Sales & Marketing.</option>
+                    <option>Diploma in Banking & Finance.</option>
+                    <option>Diploma in Monitoring & Evaluation.</option>
+                    <option>Diploma in Project Management.</option>
+                    <option>Doctor of Philosophy in IT.</option>
+                    <option>Doctor of Philosophy in IT Security & Audit.</option>
+                    <option>Master of Science in IT.</option>
+                    <option>Master of Science in IT Security & Audit.</option>
+                    <option>Master of Science in Environmental Science.</option>
+                    <option>Bachelor of Science in Computer Science.</option>
+                    <option>Bachelor of Science in IT.</option>
+                    <option>Bachelor of Science in Telecommunications.</option>
+                    <option>Bachelor of Science in Acturial Science.</option>
+                    <option>Bachelor of Science in Computer Security & Forensics.</option>
+                    <option>Bachelor of Science.</option>
+                    <option>Bachelor of Science in Environmental Science.</option>
+                    <option>Diploma in Computer Science.</option>
+                    <option>Diploma in IT.</option>
+                    <option>Certificate in IT.</option>
+                    <option>Doctor of Philosophy in Education.</option>
+                    <option>Master of Eduaction.</option>
+                    <option>Bachelor of Education(Science).</option>
+                    <option>Bachelor of Eduaction(Arts).</option>
+                    <option>Bachelor of Agricultural Education & Extension.</option>
+                    <option>Bachelor of Arts in Chaplaincy.</option>
+                    <option>Bachelor of Theology.</option>
+                    <option>Diploma in Theology.</option>
+                    <option>Diploma in Chaplaincy.</option>
+                    <option>Diploma in Education(Science).</option>
+                    <option>Diploma in Education(Arts).</option>
+                    <option>Diploma in Education(ECDE).</option>
+                    <option>Certificate in Education(ECE).</option>
+                    <option>Bachelor of Law.</option>
+                    <option>Master of Medicine in Family Medicine.</option>
+                    <option>Master of Science in Human Nutrition & Dietetics.</option>
+                    <option>Master of Public Health.</option>
+                    <option>Master of Science in Nursing.</option>
+                    <option>Master of Science in Clinical Medicine.</option>
+                    <option>Bachelor of Science in Nursing.</option>
+                    <option>Bachelor of Science in Clinical Medicine.</option>
+                    <option>Bachelor of Science in Environmental Health.</option>
+                    <option>Bachelor of Science in Human Nutrition & Dietetics.</option>
+                    <option>Diploma in Human Nutrition & Dietetics.</option>
+                    <option>Diploma in Environmental Health.</option>
+                    <option>Diploma in Medical Labaratory Sciences.</option>
+                    <option>Diploma in Clinical Medicine & Surgery.</option>
+                    <option>Certificate in Environmental Impact Assessment.</option>
+                    <option>Bachelor of Pharmacy.</option>
+                    <option>Doctor of Philosophy in Music.</option>
+                    <option>Master of Music.</option>
+                    <option>Bachelor of Music Production Technology.</option>
+                    <option>Bachelor of Music Theory, Composition & Performance.</option>
+                    <option>Bachelor of Mass Communication.</option>
+                    <option>Diploma in Mass Communication.</option>
+                    <option>Diploma in Music.</option>
+                    <option>Diploma in Theatre Arts.</option>
+                    <option>Diploma in Electronic Media.</option>
+                    <option>Certificate in Mass Communication.</option>
+                    <option>Certificate in Music.</option>
+                    <option>Short Courses In Music.</option></select><br><br> 
+            </div><hr><br>
+            <div id="row">
+            <label for="password">Password:</label><input id="password" type="password" placeholder="*****" required=""><input id="check" type="checkbox"> <label for="password2"> Confirm:</label><input id="password2" type="password2" placeholder="*****" required=""><input id="check" type="checkbox"><br>
+        </div><hr><br><br>
+           <a href="#"> <button class="btn">Register</button></a><br>
+            <h5 class="register">Already have an Account? <a href="StudentLogin2.html" target="_blank">Login</a></h5>
+        
+        </fieldset>
+        </form>
+        <script>
+            let img = document.getElementById('img');
+            let input = document.getElementById('input');
+
+            input.onchange = (e) =>{
+                if (input.files[0])
+                img.src = URL.createObjectURL(input.files[0]);
+            };
+        </script>
+        <script>
+             check.onclick = togglePassword;
+
+function togglePassword(){
+    if (check.checked) password2.type = "text";
+    else password2.type = "password";
+}
+        </script>
+    </body>
+</html>

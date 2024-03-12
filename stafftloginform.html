@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff Login Form</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(5, 19, 73, 0.7), rgba(5, 19, 73, 0.7)), url(img/admn\ 1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+           font-family: 'Times New Roman', Times, serif;
+            padding: 20px;
+        }
+
+        form {
+            margin: 5% auto;
+            max-width: 400px;
+            background-color: cornflowerblue;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 5px 2px 5px rgb(77, 5, 5);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        h5 {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: brown;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #8B0000;
+        }
+
+        .register {
+            text-align: center;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .error-message {
+            display: none;
+            background-color: #f44336;
+            color: white;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        @media screen and (min-width: 768px) {
+            form {
+                max-width: 600px;
+            }
+
+            input, select {
+                width: 48%;
+                margin-right: 2%;
+                margin-bottom: 15px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            form {
+                max-width: 800px;
+            }
+
+            input, select {
+                width: 32%;
+                margin-right: 2%;
+                margin-bottom: 15px;
+            }
+
+            .btn {
+                width: 30%;
+                margin-left: 35%;
+            }
+        }
+    </style>
+</head>
+<body>
+<form id="loginForm" onsubmit="return handleLogin()">
+    <fieldset>
+        <h2><em><u>LOGIN</u></em></h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="staffNo">Staff No:</label>
+        <input type="text" id="staffNo" name="staffNo" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="*****" required><br>
+        <label for="confirm">Confirm:</label>
+        <input type="password" id="confirm" name="confirm" placeholder="*****" required><br>
+        <hr><br>
+        <button type="submit" class="btn">Login</button><br>
+        <h5 class="register">Don't have an Account? <a href="staffsignupform.html">Sign Up</a></h5>
+        <div class="success-message" id="successMessage">Login successful!</div>
+        <div class="error-message" id="errorMessage">Invalid credentials. Please try again.</div>
+    </fieldset>
+</form>
+
+<script>
+    function handleLogin() {
+        // Simulate successful login for demonstration
+        let name = document.getElementById('name').value;
+        let staffNo = document.getElementById('staffNo').value;
+        let password = document.getElementById('password').value;
+        let confirm = document.getElementById('confirm').value;
+
+        // Check if password and confirm match
+        if (password !== confirm) {
+            showErrorMessage("Passwords do not match.");
+            return false;
+        }
+
+        // Simulate successful login
+        showSuccessMessage("Login successful, " + name + "!");
+        // Prevent form submission
+        return false;
+    }
+
+    function showSuccessMessage(message) {
+        let successMessage = document.getElementById('successMessage');
+        let errorMessage = document.getElementById('errorMessage');
+
+        successMessage.innerText = message;
+        successMessage.style.display = 'block';
+
+        errorMessage.style.display = 'none';
+
+        // Hide the success message after 2 seconds
+        setTimeout(function () {
+            successMessage.style.display = 'none';
+        }, 2000);
+    }
+
+    function showErrorMessage(message) {
+        let successMessage = document.getElementById('successMessage');
+        let errorMessage = document.getElementById('errorMessage');
+
+        errorMessage.innerText = message;
+        errorMessage.style.display = 'block';
+
+        successMessage.style.display = 'none';
+    }
+</script>
+</body>
+</html>

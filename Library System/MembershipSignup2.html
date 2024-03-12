@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>Membership Registration Form</title>
+        <style>
+            body{
+                background-image: linear-gradient(rgba(5, 19, 73, 0.7),rgba(5, 19, 73, 0.7)), url(img/lecture1.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            img{
+                border-radius: 50%;
+                object-fit: cover;
+                background:cornflowerblue;
+                border: 1px solid black;
+            }
+            #input{
+                align-items: center;
+            }
+            #row{
+                justify-content: space-around;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                flex: 2 2 80px;
+                margin-top: 5%;
+            }
+            .btn{
+                margin-left: 45%;
+                padding: 15px 35px;
+                border: 2px;
+                border-radius: 20px;
+                box-shadow: 2px 5px 2px 5px rgb(77, 5, 5);
+            }
+            h5{
+                text-align: center;
+                font-size: 16px;
+            }
+            input{
+                border-radius: 20px;
+                padding: 8px 5px;
+            }
+            select{
+                border-radius: 20px;
+                padding: 2px 5px;
+            }
+            h2{
+                text-align: center;
+                font-size: 14px;
+            }
+            form{
+                margin-top: 7%;
+                margin-left: 18%;
+                margin-right: 18%;
+                background-color:teal;
+            }
+            .btn:hover{
+                scale: 1.2s;
+                background-color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" name="regform" method="post">
+           <fieldset style="  box-shadow: 2px 5px 2px 5px rgb(77, 5, 5);">
+            <h2><em>REGISTER.</em></h2>
+            <h2><em><u>Kindly fill in the form to register.</u></em></h2>
+            <div>
+                <h1>Member's Photo. <img id="img" src="Choose.png" height="120px" width="120px"> </h1>
+            </div>
+            <input id="input" type="file">
+            <br><br><br>
+            <div id="row">
+            <label for="staffsname">Member's<br> Name:</label> <input type="text" id="staffsname" name="staffsname" placeholder="Enter Staff Name" required="name"> <label for="staffsphone">Member's <br>Phone No:</label> <input type="number" id="staffsnumber" name="staffsnumber" placeholder="079******" required="number"> <br>
+        </div><hr>
+            <div id="row">
+           <label for="staffsemail">Member's<br> Email: </label><input type="email" id="staffsemail" name="staffsemail" placeholder="xyz@gmail.com" required="email"><label for="staffsnationalid">Member's<br> National Id:</label><input type="number" id="staffsnationalid" name="staffsnationalid" placeholder="40******" required="number"><br>
+        </div>
+        <hr>
+            <div id="row">
+                <label for="gender">Gender:</label><select size="" name="D2">
+                    <option>-Select One-</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option> </select><label for="dob">D.O.B:</label><input type="number & text" placeholder="dd/mm/yy" required="number"><br>
+        </div><hr>
+            <div id="row">
+            <label for="campus">Occupation:</label><select id="campus" size="" name="D2">
+                <option>-Select One-</option>
+                <option>Teacher.</option>
+                <option>Engineer.</option>
+                <option>Student.</option>
+            <option >Other</option> </select><label for="department">If Other Specify:</label> <input type="text" placeholder="Enter Your Occupation">
+                </div><hr><br>
+                <div id="row">
+                    <label for="category">Residence:</label><input type="text" placeholder="Enter Your Residential Area"><label for="category">Religion:</label><input type="text" placeholder="Enter Your Religion">
+                </div><hr><br>
+            <div id="row">
+                <label for="password">Password:</label><input type="password" placeholder="*****" required=""><label for="password2"> Confirm:</label><input type="password2" placeholder="*****" required=""><br>
+        </div><hr><br><br>
+           <a href="#"> <button class="btn">Register</button></a><br>
+            <h5 class="register">Already have an Account? <a href="MembershipLogin2.html" target="_blank">Login</a></h5>
+        
+        </fieldset>
+        </form>
+        <script>
+            let img = document.getElementById('img');
+            let input = document.getElementById('input');
+
+            input.onchange = (e) =>{
+                if (input.files[0])
+                img.src = URL.createObjectURL(input.files[0]);
+            };
+
+
+        </script>
+    </body>
+</html>
