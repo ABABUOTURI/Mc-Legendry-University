@@ -1,0 +1,248 @@
+
+    :root {
+      --primary-color: #004080;
+      --accent-color: #00bcd4;
+      --bg-color: #f4faff;
+      --text-color: #333;
+      --light: #ffffff;
+      --secondary-bg: #e6f7ff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .header {
+        background: var(--primary-color);
+        color: var(--light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        flex-wrap: wrap;
+        position: relative;
+      }
+      
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .navbar a {
+        color: var(--light);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .header-cta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+      
+      .header-cta input {
+        padding: 0.5rem;
+        border-radius: 5px;
+        border: none;
+      }
+      
+      .header-cta button {
+        background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+        color: var(--light);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+      }
+      
+      .menu-toggle span {
+        height: 3px;
+        width: 25px;
+        background: var(--light);
+        display: block;
+      }
+      
+      @media (max-width: 768px) {
+        .navbar ul {
+          display: none;
+          flex-direction: column;
+          background: var(--primary-color);
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          padding: 1rem;
+        }
+      
+        .navbar ul.active {
+          display: flex;
+        }
+      
+        .menu-toggle {
+          display: flex;
+        }
+      
+        .header-cta {
+          flex-direction: column;
+          width: 100%;
+          margin-top: 1rem;
+        }
+      }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin: 1.5rem 0 1rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: var(--light);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .calendar, .timetable, .search, .elearning, .research {
+      background: var(--secondary-bg);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+      color: var(--light);
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+      margin-top: 0.5rem;
+    }
+
+    .btn:hover {
+      background: var(--accent-color);
+    }
+
+    .academics-grid {
+      display: grid;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    
+    .academics-grid > div {
+      background: var(--light);
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-left: 5px solid var(--accent-color);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 5px;
+    }
+    
+    .academics-grid > div:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    .btn {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.6rem 1.2rem;
+      background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    
+    .btn:hover {
+      background: linear-gradient(to right, var(--accent-color), var(--primary-color));
+    }
+    
+    /* Responsive Grid Layout */
+    @media (min-width: 992px) {
+      .academics-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (min-width: 768px) and (max-width: 991px) {
+      .academics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .academics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+
+  .footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .footer .social-links {
+    margin-top: 0.5rem;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  

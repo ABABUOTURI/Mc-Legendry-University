@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News & Events - Kabarak University</title>
+  <link rel="stylesheet" href="news.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Mc Legendry University</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="navbar">
+          <ul id="menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Admissions.html">Admissions</a></li>
+            <li><a href="Academics.html">Academic</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <input type="text" placeholder="Search...">
+          <button>Apply Now</button>
+        </div>
+      </header>
+
+  <main class="main-container">
+    <section class="section fade-in-left">
+      <h2>Latest News</h2>
+      <div class="card">
+        <img src="images/news1.jpg" alt="News 1">
+        <div class="content">
+          <h3>University Ranked Top in Innovation</h3>
+          <p>Kabarak University has been recognized for its contribution to research and innovation in Kenya.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in-right">
+      <h2>Press Releases</h2>
+      <div class="card">
+        <img src="images/press.jpg" alt="Press Release">
+        <div class="content">
+          <h3>New Faculty Appointments</h3>
+          <p>The university announces the appointment of new deans for three faculties.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in-bottom">
+      <h2>Upcoming Events</h2>
+      <div class="card">
+        <img src="images/events.jpg" alt="Event">
+        <div class="content">
+          <h3>Career Week - July 25th</h3>
+          <p>Join us for an interactive session with industry professionals.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in-top">
+      <h2>Public Lectures</h2>
+      <div class="card">
+        <img src="images/lecture.jpg" alt="Lecture">
+        <div class="content">
+          <h3>Digital Transformation in Africa</h3>
+          <p>Lecture by Prof. Jane Wanjiru on July 30th, Kabarak Auditorium.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in-left">
+      <h2>Convocation Notices</h2>
+      <div class="card">
+        <img src="images/convocation.jpg" alt="Convocation">
+        <div class="content">
+          <h3>Graduation 2025 Notice</h3>
+          <p>All prospective graduates are advised to confirm their details by August 10th.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in-right">
+      <h2>Archived News</h2>
+      <div class="card">
+        <img src="images/archive.jpg" alt="Archive">
+        <div class="content">
+          <h3>Alumni Excellence Awards 2023</h3>
+          <p>Highlights from last year’s alumni recognition event.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <p>&copy; 2025 Mc Legendry University. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+  <script src="news.js"></script>
+  <script>
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('animate');io.unobserve(entry.target);}});
+    },{threshold:.15});
+    document.querySelectorAll('.section').forEach(sec=>io.observe(sec));
+  </script>
+</body>
+</html>

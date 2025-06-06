@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions | Mc Legendry University</title>
+  <link rel="stylesheet" href="Admissions.css" />
+</head>
+<body>
+  <!-- <header>
+    <h1>Admissions - Mc Legendry University</h1>
+  </header> -->
+  <header class="header">
+    <div class="logo">Mc Legendry University</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navbar">
+      <ul id="menu-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Admissions.html">Admissions</a></li>
+        <li><a href="Academics.html">Academic</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <input type="text" placeholder="Search...">
+      <button>Apply Now</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Welcome Message</h2>
+      <p>We are thrilled to welcome you to Mc Legendry University, where excellence meets opportunity. Begin your academic journey with us!</p>
+    </section>
+
+    <section>
+      <h2>Why Choose Mc Legendry?</h2>
+      <p>Our university fosters innovation, inclusivity, and integrity. With state-of-the-art facilities and globally recognized faculty, your future starts here.</p>
+    </section>
+
+    <section >
+      <h2>Application Process</h2>
+      <div class="steps">
+        <div class="card">Step 1: Create an account</div>
+        <div class="card">Step 2: Complete your application</div>
+        <div class="card">Step 3: Upload required documents</div>
+        <div class="card">Step 4: Submit & pay application fee</div>
+        <div class="card">Step 5: Await confirmation</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Requirements</h2>
+      <div class="requirements">
+        <div class="card"><strong>Undergraduate:</strong> KCSE Certificate, ID or Passport, Recommendation Letters.</div>
+        <div class="card"><strong>Postgraduate:</strong> Degree Certificate, Transcripts, 2 References.</div>
+        <div class="card"><strong>International:</strong> Passport, English Proficiency Proof, Equivalency Letter.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Fees & Payment Info</h2>
+      <p>All tuition fees are payable per semester. You can pay via bank transfer, mobile money, or online card payments.</p>
+    </section>
+
+    <section>
+      <h2>Financial Aid & Scholarships</h2>
+      <p>We offer need-based scholarships and merit-based aid. Apply early to maximize your chances of receiving support.</p>
+    </section>
+
+    <section>
+      <h2>Application Deadlines</h2>
+      <p><strong>Undergraduate:</strong> August 15<br><strong>Postgraduate:</strong> September 30<br><strong>International:</strong> July 15</p>
+    </section>
+
+    <section>
+      <h2>Prospectus</h2>
+      <p><a class="download" href="/downloads/mc_legendry_prospectus.pdf" download>Download our 2025 Prospectus PDF</a></p>
+    </section>
+
+    <button class="cta-button">Apply Now</button>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h4 onclick="toggleFAQ(0)">Can I apply online?</h4>
+        <div class="faq-answer">Yes, our application portal is fully online.</div>
+      </div>
+      <div class="faq-item">
+        <h4 onclick="toggleFAQ(1)">Is financial aid available for international students?</h4>
+        <div class="faq-answer">Yes, we offer limited scholarships to international applicants.</div>
+      </div>
+      <div class="faq-item">
+        <h4 onclick="toggleFAQ(2)">Can I defer my admission?</h4>
+        <div class="faq-answer">Deferral is possible with valid reasons. Contact admissions for help.</div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <p>&copy; 2025 Mc Legendry University. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFAQ(index) {
+      const answers = document.querySelectorAll('.faq-answer');
+      answers[index].style.display = answers[index].style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
