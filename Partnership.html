@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Partnerships – Mc Legendry University</title>
+  <link rel="stylesheet" href="Partnership.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Partnerships & Collaborations</h1>
+    <p>Building strong connections for academic excellence and community impact</p>
+  </header>
+
+  <main class="container">
+    <section class="section fade-in from-left">
+      <h2>Industry Partnerships Overview</h2>
+      <p>We collaborate with leading companies to provide students with real-world experience and career opportunities.</p>
+      <img src="images/industry_partnership.jpg" alt="Industry Partnership" />
+    </section>
+
+    <section class="section fade-in from-right">
+      <h2>Research Collaborations</h2>
+      <p>Joint research projects with institutions worldwide fostering innovation and knowledge sharing.</p>
+      <img src="images/research_collab.jpg" alt="Research Collaboration" />
+    </section>
+
+    <section class="section fade-in from-bottom">
+      <h2>Internship & Attachment Programs</h2>
+      <p>Robust internship programs connecting students with businesses to gain practical skills.</p>
+      <img src="images/internship_program.jpg" alt="Internship Program" />
+    </section>
+
+    <section class="section fade-in from-top">
+      <h2>International Collaborations</h2>
+      <p>Expanding global horizons through exchange programs and joint academic ventures.</p>
+      <img src="images/international_collab.jpg" alt="International Collaboration" />
+    </section>
+
+    <section class="section fade-in from-left">
+      <h2>Alumni Engagement & Contributions</h2>
+      <p>Empowering alumni to give back through mentorship, funding, and networking events.</p>
+      <img src="images/alumni_engagement.jpg" alt="Alumni Engagement" />
+    </section>
+
+    <section class="section fade-in from-right">
+      <h2>Community Outreach Projects</h2>
+      <p>Driving positive change with impactful community development and volunteer initiatives.</p>
+      <img src="images/community_outreach.jpg" alt="Community Outreach" />
+    </section>
+  </main>
+
+  <script src="partnerships.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.section');
+
+  // Delay and reveal each section with staggered animation
+  sections.forEach((section, index) => {
+    setTimeout(() => {
+      section.classList.add('visible');
+    }, index * 350); // stagger by 350ms
+  });
+});
+
+  </script>
+</body>
+</html>

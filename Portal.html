@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal – Mc Legendry University</title>
+  <link rel="stylesheet" href="portal.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Welcome to the Central Portal</h1>
+    <p>Your gateway to Student & Staff Services</p>
+  </header>
+
+  <main class="container">
+    <section class="section fade-in from-left">
+      <h2>Student Portal</h2>
+      <p>Access your courses, grades, schedules, and more with ease.</p>
+      <img src="images/student_portal.jpg" alt="Student Portal" />
+      <a href="student-portal.html" class="btn">Go to Student Portal</a>
+    </section>
+
+    <section class="section fade-in from-right">
+      <h2>Staff Portal</h2>
+      <p>Manage faculty resources, schedules, and communications efficiently.</p>
+      <img src="images/staff_portal.jpg" alt="Staff Portal" />
+      <a href="staff-portal.html" class="btn">Go to Staff Portal</a>
+    </section>
+
+    <section class="section fade-in from-bottom">
+      <h2>Instructions for Access</h2>
+      <p>Follow our simple guidelines to log in securely and manage your account.</p>
+      <img src="images/instructions_access.jpg" alt="Access Instructions" />
+      <ol>
+        <li>Use your university-issued username and password.</li>
+        <li>Ensure your account is active and verified.</li>
+        <li>Contact tech support if you face any login issues.</li>
+      </ol>
+    </section>
+
+    <section class="section fade-in from-top">
+      <h2>Tech Support Contacts</h2>
+      <p>We’re here to help you 24/7 with any portal access or technical difficulties.</p>
+      <img src="images/tech_support.jpg" alt="Tech Support" />
+      <ul>
+        <li>Email: support@mcul.edu</li>
+        <li>Phone: +1 (555) 123-4567</li>
+        <li>Live Chat: Available on the portal site</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="portal.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach((section, index) => {
+    setTimeout(() => {
+      section.classList.add('visible');
+    }, index * 400); // stagger animations by 400ms
+  });
+});
+
+  </script>
+</body>
+</html>

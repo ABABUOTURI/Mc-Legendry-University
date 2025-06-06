@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academic Programs | Mc Legendry University</title>
+  <link rel="stylesheet" href="Programs.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Mc Legendry University</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navbar">
+      <ul id="menu-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Admissions.html">Admissions</a></li>
+        <li><a href="Academics.html">Academic</a></li>
+        <li><a href="Programs.html">Programs</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <input type="text" placeholder="Search...">
+      <button>Apply Now</button>
+    </div>
+  </header>
+
+  <section class="filters fade-in from-top">
+    <select id="degreeFilter">
+      <option value="all">All Degree Levels</option>
+      <option value="undergraduate">Undergraduate</option>
+      <option value="postgraduate">Postgraduate</option>
+      <option value="diploma">Diploma</option>
+    </select>
+    <select id="schoolFilter">
+      <option value="all">All Schools</option>
+      <option value="business">School of Business</option>
+      <option value="science">School of Science</option>
+      <option value="engineering">School of Engineering</option>
+    </select>
+    <select id="durationFilter">
+      <option value="all">All Durations</option>
+      <option value="1">1 Year</option>
+      <option value="2">2 Years</option>
+      <option value="3">3 Years</option>
+      <option value="4">4 Years</option>
+    </select>
+  </section>
+
+  <main class="programs-container">
+    <div class="program-card fade-in from-left">
+      <img src="img/admn 1.jpg" alt="Bachelor of Business" />
+      <h3>Bachelor of Business Administration</h3>
+      <p>School: Business | Duration: 4 Years | Level: Undergraduate</p>
+    </div>
+
+    <div class="program-card fade-in from-right">
+      <img src="img/admn2.jpg" alt="MSc Data Science" />
+      <h3>Master of Science in Data Science</h3>
+      <p>School: Science | Duration: 2 Years | Level: Postgraduate</p>
+    </div>
+
+    <div class="program-card fade-in from-bottom">
+      <img src="img/admn3.jpg" alt="Diploma in IT" />
+      <h3>Diploma in Information Technology</h3>
+      <p>School: Engineering | Duration: 2 Years | Level: Diploma</p>
+    </div>
+
+    <div class="program-card fade-in from-left">
+        <img src="img/admn 1.jpg" alt="Bachelor of Business" />
+        <h3>Bachelor of Business Administration</h3>
+        <p>School: Business | Duration: 4 Years | Level: Undergraduate</p>
+      </div>
+  
+      <div class="program-card fade-in from-right">
+        <img src="img/admn2.jpg" alt="MSc Data Science" />
+        <h3>Master of Science in Data Science</h3>
+        <p>School: Science | Duration: 2 Years | Level: Postgraduate</p>
+      </div>
+  
+      <div class="program-card fade-in from-bottom">
+        <img src="img/admn3.jpg" alt="Diploma in IT" />
+        <h3>Diploma in Information Technology</h3>
+        <p>School: Engineering | Duration: 2 Years | Level: Diploma</p>
+      </div>
+
+      <div class="program-card fade-in from-left">
+        <img src="img/admn 1.jpg" alt="Bachelor of Business" />
+        <h3>Bachelor of Business Administration</h3>
+        <p>School: Business | Duration: 4 Years | Level: Undergraduate</p>
+      </div>
+  
+      <div class="program-card fade-in from-right">
+        <img src="img/admn2.jpg" alt="MSc Data Science" />
+        <h3>Master of Science in Data Science</h3>
+        <p>School: Science | Duration: 2 Years | Level: Postgraduate</p>
+      </div>
+  
+      <div class="program-card fade-in from-bottom">
+        <img src="img/admn3.jpg" alt="Diploma in IT" />
+        <h3>Diploma in Information Technology</h3>
+        <p>School: Engineering | Duration: 2 Years | Level: Diploma</p>
+      </div>
+
+      <div class="program-card fade-in from-left">
+        <img src="img/admn 1.jpg" alt="Bachelor of Business" />
+        <h3>Bachelor of Business Administration</h3>
+        <p>School: Business | Duration: 4 Years | Level: Undergraduate</p>
+      </div>
+  
+      <div class="program-card fade-in from-right">
+        <img src="img/admn2.jpg" alt="MSc Data Science" />
+        <h3>Master of Science in Data Science</h3>
+        <p>School: Science | Duration: 2 Years | Level: Postgraduate</p>
+      </div>
+  
+      <div class="program-card fade-in from-bottom">
+        <img src="img/admn3.jpg" alt="Diploma in IT" />
+        <h3>Diploma in Information Technology</h3>
+        <p>School: Engineering | Duration: 2 Years | Level: Diploma</p>
+      </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <p>&copy; 2025 Mc Legendry University. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu-list").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

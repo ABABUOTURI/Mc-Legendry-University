@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staff & Faculty – Mc Legendry University</title>
+  <link rel="stylesheet" href="Staff.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Meet Our Staff & Faculty</h1>
+  </header>
+
+  <main class="main-container">
+    <section class="section fade-in from-left">
+      <h2>Staff Portal</h2>
+      <a href="#" class="portal-link">Access Staff Portal</a>
+    </section>
+
+    <section class="section fade-in from-right">
+      <h2>Faculty Directory</h2>
+      <div class="faculty-grid">
+        <div class="faculty-card">
+          <img src="images/faculty1.jpg" alt="Prof. Alice Smith" />
+          <h3>Prof. Alice Smith</h3>
+          <p>Email: alice@university.edu</p>
+        </div>
+        <div class="faculty-card">
+          <img src="images/faculty2.jpg" alt="Dr. John Doe" />
+          <h3>Dr. John Doe</h3>
+          <p>Email: john@university.edu</p>
+        </div>
+        <!-- Add more faculty-card blocks -->
+      </div>
+    </section>
+
+    <section class="section fade-in from-bottom">
+      <h2>Research Publications</h2>
+      <ul class="publications">
+        <li>"AI in Education" – Dr. John Doe</li>
+        <li>"Modern Economics" – Prof. Alice Smith</li>
+        <!-- More items -->
+      </ul>
+    </section>
+
+    <section class="section fade-in from-top">
+      <h2>Staff Services & Resources</h2>
+      <p>Access administrative tools, campus services, and staff support programs here.</p>
+    </section>
+
+    <section class="section fade-in from-left">
+      <h2>HR Policies & Documents</h2>
+      <ul class="docs">
+        <li><a href="#">Code of Conduct</a></li>
+        <li><a href="#">Leave Policy</a></li>
+        <!-- More links -->
+      </ul>
+    </section>
+
+    <section class="section fade-in from-right">
+      <h2>Professional Development</h2>
+      <p>Explore our workshops, seminars, and career-building programs for staff and faculty.</p>
+    </section>
+  </main>
+
+  <script src="staff-faculty.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".section");
+
+  const reveal = () => {
+    sections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      const threshold = window.innerHeight * 0.85;
+
+      if (top < threshold) {
+        section.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", reveal);
+  reveal();
+});
+
+  </script>
+</body>
+</html>

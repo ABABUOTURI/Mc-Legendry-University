@@ -125,7 +125,9 @@
         grid-template-columns:repeat(3,1fr);
     }
 }
-
+h2{
+  color: var(--primary-color);
+}
   .section{
     background:var(--light);
     border-radius:12px;

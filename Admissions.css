@@ -111,13 +111,7 @@
     margin-top: 1rem;
   }
 }
-  /* header, footer {
-    background: var(--primary-color);
-    color: var(--light);
-    padding: 1rem;
-    text-align: center;
-  } */
-
+ 
   .container {
     max-width: 1400px;
     margin: auto;

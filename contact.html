@@ -1,131 +1,133 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-        <title>Mc Legendry University</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css ">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-<!-------------------------------------------nav start--------------------------------------------------------------->
-        <section class="home-4">
-        <header class="home-3">
-            <nav class="navbar">
-                <h2 class="logo">Mc <span>Legendry</span> University</h2>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <h1>Contact Us</h1>
-        </header>
-        <!-------------------------------------------nav end--------------------------------------------------------------->
-<!-------------------------------------------Contact start--------------------------------------------------------------->
-<section class="contact-us">
-    <div class="row">
-        <div class="contact-col">
-            <div>
-                <i class="fa fa-home"></i>
-                <span>
-                    <h5>ABC Road, XYZ Building</h5>
-                    <p><em>Nakuru,Moi Avenue</em></p>
-                </span>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <span>
-                    <h5>info@mclegendryuniversity.com</h5>
-                    <p><em>Email us your query</em></p>
-                </span>
-            </div>
-            <div>
-                <i class="fa fa-facebook-square"></i>
-                <span>
-                    <h5>+254714205641 <br> +254769856267</h5>
-                    <p><em>Monday to Friday, 8AM to 5PM</em></p>
-                </span>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us – Mc Legendry University</title>
+  <link rel="stylesheet" href="Contact.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pEMQXXsL5jI4uYvhHRl58MxN6P5Pfq3ZqG6fSBTxSTH7sJqf9Xzsp+wEnFmZ4V0qJHZ+9DlXvXtRMT9bI8NnRw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Mc Legendry University</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="contact-col">
-            <form action="form-handler.php" method="post">
-                <input type="text" name="name" placeholder="Enter your name" required>
-                <input type="email" name="email" placeholder="Enter email address" required>
-                <input type="text" name="subject" placeholder="Enter your subject" required>
-                <textarea rows="8" name="message" placeholder="message" required></textarea>
-            <button type="submit" class="btn-3">Send Message</button>
-            </form>
+        <nav class="navbar">
+          <ul id="menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Admissions.html">Admissions</a></li>
+            <li><a href="Academics.html">Academic</a></li>
+            <li><a href="Programs.html">Programs</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-cta">
+          <input type="text" placeholder="Search...">
+          <button>Apply Now</button>
         </div>
+      </header>
+
+  <main class="container">
+    <div class="contact-container">
+        <section class="section fade-in from-left">
+          <h2>Send Us a Message</h2>
+          <form id="contactForm" novalidate>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+      
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required />
+      
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+      
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </section>
+      
+        <section class="section fade-in from-right">
+          <h2>Contact Details</h2>
+          <p><i class="fas fa-phone"></i> Phone: +254714205641</p>
+          <p><i class="fas fa-envelope"></i> Email: ababuoturi@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Address: 20KM From Nakuru Town,Along Eldama Ravine Road</p>
+      
+          <h3>Operating Hours</h3>
+          <p>Monday – Friday: 8:00 AM – 5:00 PM</p>
+          <p>Saturday: Closed</p>
+          <p>Sunday: Closed</p>
+      
+          <h3>Emergency Contact+254714205641</p>
+          <p>Health Services: +254714205641</p>
+      
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </section>
+      </div>
+      
+
+    <section class="section fade-in from-bottom map-section">
+      <h2>Find Us Here</h2>
+      <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.123456789!2d36.123456!3d-0.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f123456789abc%3A0xabcdef1234567890!2sKabarak%20University!5e0!3m2!1sen!2ske!4v1623456789012!5m2!1sen!2ske"
+  width="100%"
+  height="300"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  title="Kabarak University Map"
+></iframe>
+
+    </section>
+  </main>
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <p>&copy; 2025 Mc Legendry University. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
     </div>
-</section>
-<section class="testimonial">
-    <h1><em>Testimonials.</em></h1>
-    <p><em>What Our Students, Parents, Delegates And Lectures Say About Us.</em></p>
-    <br><br>
-    <div class="row">
-        <div class="book">
-         <p style="font-size: 12px;margin-left: 10%;"> Mc Legendry University is a private Chartered Institution <br>of higher learning that provides 
-            holistic,quality education,research and outreach activities aimed at producing graduates 
-            who are fully equiped for the service of God and humanity.  </p>
-         <div class="cover">
-             <p><img src="img/mercy.jpg" alt="EOA"style="width:120px;height:90px;border-radius:50%"><br>Mercy Jesang.<br><br><br><br><br>
-                <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> 
-                <i class="fa fa-star"></i> <i class="fa fa-star"></i></p>
-         </div>
-        </div><br>
-        <div class="book">
-            <p style="font-size: 12px;margin-left: 10%;"> Mc Legendry University is a private Chartered Institution <br>of higher learning that provides 
-                holistic,quality education,research and outreach activitiesaimed at producing graduates 
-                who are fully equiped for the service of God and humanity.  </p>
-            <div class="cover">
-                <p><img src="img/lourine.jpg" alt="EOA"style="width:100px;height:100px;border-radius:50%"><br>Lourine Amimo.<br><br><br><br><br>
-                    <i class="fa fa-star-half-o"></i> <i class="fa fa-star-half-o"></i> 
-                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></p>
-            </div>
-           </div><br>
-           <div class="book">
-            <p style="font-size: 12px;margin-left: 10%;"> Mc Legendry University is a private Chartered Institution <br>of higher learning that provides 
-                holistic,quality education,research and outreach activitiesaimed at producing graduates 
-                who are fully equiped for the service of God and humanity.  </p>
-            <div class="cover">
-                <p><img src="img/n3.jpg" alt="EOA"style="width:100px;height:100px;border-radius:50%"><br>Muna Elizabeth.<br><br><br><br><br>
-                    <i class="fa fa-star-half-o"></i> <i class="fa fa-star-half-o"></i> 
-                    <i class="fa fa-star"></i> <i class="fa fa-star"></i></p>
-            </div>
-           </div><br>
-           <div class="book">
-            <p style="font-size: 12px;margin-left: 10%;"> Mc Legendry University is a private Chartered Institution <br>of higher learning that provides 
-                holistic,quality education,research and outreach activitiesaimed at producing graduates 
-                who are fully equiped for the service of God and humanity.  </p>
-            <div class="cover">
-                <p><img src="img/Larry.jpg" alt="EOA"style="width:100px;height:100px;border-radius:50%"><br>Larry Opiyo.<br><br><br><br><br>
-                    <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> 
-                    <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></p>
-            </div>
-           </div><br>
-        <div class="book">
-            <p style="font-size: 12px;margin-left: 10%;"> Mc Legendry University is a private Chartered Institution <br>of higher learning that provides 
-                holistic,quality education,research and outreach activitiesaimed at producing graduates 
-                who are fully equiped for the service of God and humanity.  </p>
-         <div class="cover">
-             <p><img src="img/n1.jpg" alt="EOA"style="width:100px;height:100px;border-radius:50%"><br> Asaph Emmanuel.<br><br><br><br><br>
-                <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> 
-                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></p>
-         </div>
-        </div>
-     </div>
-</section><br><br>
-<!-------------------------------------------Contact end--------------------------------------------------------------->
-<!-------------------------------------------footer start-------------------------------------------------------------->
-<section class="footer">
-    <p><a href="index.html">HOME | </a><a href="about.html">ABOUT | </a><a href="service.html">SERVICE | </a><a href="contact.html">CONTACT</a></p>
-    <p class="end" style="font-size: 14px;"><em>&copy;2023 mclegendryuniversity-All Rights Reserved</em></p>
-</section>
-<!-------------------------------------------footer end--------------------------------------------------------------->
-    </body>
+  </footer>
+  <script src="contact.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach((section, index) => {
+    setTimeout(() => {
+      section.classList.add('visible');
+    }, index * 500); // stagger each section 500ms apart
+  });
+
+  // Simple form validation (optional)
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      alert('Please fill out all required fields correctly.');
+      return;
+    }
+    alert('Message sent! We will get back to you soon.');
+    form.reset();
+  });
+});
+
+  </script>
+</body>
 </html>
