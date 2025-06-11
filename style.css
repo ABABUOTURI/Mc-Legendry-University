@@ -151,7 +151,7 @@ body {
 
 section {
   padding: 2rem 1rem;
-  max-width: 1100px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -220,6 +220,39 @@ ul li {
   border-radius: 5px;
 }
 
+section, .pillars div, .hero-content, .cta-section button, .newsletter, .footer-content, .news-events ul, .events ul, .spotlight {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+section.animate, .pillars div.animate, .hero-content.animate, .cta-section button.animate, .newsletter.animate, .footer-content.animate, .news-events ul.animate, .events ul.animate, .spotlight.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.image-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+}
+
+.image-slider img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-slider img:hover {
+  transform: scale(1.05);
+}
+
 .footer {
   background: var(--primary-color);
   color: white;
@@ -235,4 +268,47 @@ ul li {
   color: white;
   text-decoration: none;
   margin: 0 0.5rem;
+}
+
+/* --- TWO-COLUMN LAYOUT --- */
+.two-col {
+  display: flex;
+  flex-wrap: wrap;          /* fallback for small screens */
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.two-col .col {
+  flex: 1 1 300px;          /* grow, shrink, basis */
+}
+
+.two-col .content ul {
+  padding-left: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Shared slider styles you already have */
+.image-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
+.image-slider img {
+  width: 260px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform .3s;
+}
+.image-slider img:hover { transform: scale(1.05); }
+
+/* --- RESPONSIVE STACKING --- */
+@media (max-width: 768px) {
+  .two-col { flex-direction: column; }           /* stack */
+  .two-col .slider { order: 2; }                 /* images below text */
 }

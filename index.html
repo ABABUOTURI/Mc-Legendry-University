@@ -21,9 +21,9 @@
         <li><a href="about.html">About</a></li>
         <li><a href="Admissions.html">Admissions</a></li>
         <li><a href="Academics.html">Academic</a></li>
-        <li><a href="#programs">Programs</a></li>
+        <li><a href="Programs.html">Programs</a></li>
         <li><a href="News.html">News</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <div class="header-cta">
@@ -45,15 +45,18 @@
 
   <section class="quick-links">
     <a href="Admissions.html">Admissions</a>
-    <a href="#programs">Programs</a>
+    <a href="Programs.html">Programs</a>
     <a href="#portal">Portal</a>
     <a href="#scholarships">Scholarships</a>
-    <a href="#news">News</a>
+    <a href="News.html">News</a>
   </section>
 
   <section class="about" id="about">
     <h2>About Mc Legendry University</h2>
-    <p>Mc Legendry University is committed to delivering world-class education and fostering innovation for a better future.</p>
+<p>
+Mc Legendry University is committed to delivering world-class education and fostering innovation for a better future. Founded on the principles of excellence, integrity, and inclusivity, our institution empowers students to become global leaders. We offer a diverse range of academic programs tailored to meet the evolving demands of today’s world. Our faculty consists of passionate educators and researchers dedicated to shaping the next generation. Through cutting-edge research, vibrant campus experiences, and strong industry partnerships, we ensure the holistic growth of our students. At Mc Legendry University, we believe in unlocking each student's full potential and transforming their dreams into remarkable achievements.
+</p>
+
   </section>
 
   <section class="why-choose-us">
@@ -66,30 +69,81 @@
     </div>
   </section>
 
-  <section class="news-events" id="news">
+  <!-- NEWS -->
+<section class="two-col" id="news">
+  <div class="col content">
     <h2>Latest News & Announcements</h2>
     <ul>
-      <li>Orientation 2025 begins on August 5.</li>
-      <li>New Engineering Block inaugurated.</li>
+      <li>
+        <strong>Orientation 2025:</strong> Kicks off on <strong>August 5</strong> with a week-long program to welcome new students, introduce campus life, and guide academic registration.
+      </li>
+      <li>
+        <strong>New Engineering Block Opened:</strong> A state-of-the-art facility featuring modern labs, smart classrooms, and innovation hubs to support advanced learning in engineering disciplines.
+      </li>
     </ul>
-  </section>
+  </div>
+  
 
-  <section class="events">
+  <div class="col slider">
+    <div class="image-slider">
+      <img src="img/A.jpg"  alt="Orientation Event" />
+      <img src="img/A4.jpg" alt="Engineering Block" />
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="two-col">
+ 
+
+  <div class="col slider">
+    <div class="image-slider">
+      <img src="img/A1.jpg" alt="Innovation Expo" />
+      <img src="img/A3.jpg" alt="Career Fair" />
+    </div>
+  </div>
+  <div class="col content">
     <h2>Upcoming Events</h2>
     <ul>
-      <li>Innovation Expo - July 20</li>
-      <li>Career Fair - August 10</li>
+      <li>
+        <strong>Innovation Expo – July 20:</strong> Join us to explore groundbreaking student projects, prototypes, and tech solutions. Open to students, faculty, and industry guests.
+      </li>
+      <li>
+        <strong>Career Fair – August 10:</strong> Meet top recruiters, explore internship and job opportunities, and attend resume-building and interview prep workshops.
+      </li>
     </ul>
-  </section>
+  </div>
+  
+</section>
 
-  <section class="spotlight">
+<!-- SPOTLIGHT -->
+<section class="two-col">
+  <div class="col content">
     <h2>Student & Alumni Spotlight</h2>
-    <p>Meet our top achievers and alumni making a difference in the world.</p>
-  </section>
+    <p><strong>Sarah Mwangi (Class of 2022)</strong> launched a successful health-tech startup that now serves over 20,000 users across East Africa.</p>
+    <p><strong>John Kamau (Engineering, 4th Year)</strong> recently won 1st place at the National Robotics Challenge with his AI-powered disaster response drone.</p>
+  </div>
+  
+
+  <div class="col slider">
+    <div class="image-slider">
+      <img src="img/A2.jpg" alt="Top Achiever" />
+      <img src="img/A4.jpg" alt="Successful Alumni" />
+    </div>
+  </div>
+</section>
+
+
 
   <section class="cta-section">
-    <button>Explore Programs</button>
-    <button class="secondary">Join Our Community</button>
+    <a href="Programs.html">
+      <button>Explore Programs</button>
+    </a>
+    
+    <a href="https://wa.me/254714205641" target="_blank">
+      <button class="secondary">Join Our Community</button>
+    </a>
+    
   </section>
 
   <section class="newsletter">
@@ -108,6 +162,24 @@
       </div>
     </div>
   </footer>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const animatedSections = document.querySelectorAll("section, .pillars div, .hero-content, .cta-section button, .newsletter, .footer-content, .news-events ul, .events ul, .spotlight");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      animatedSections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
   <script>
     function toggleMenu() {
       const menu = document.getElementById('menu-list');
