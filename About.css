@@ -267,3 +267,27 @@
     text-decoration: none;
     margin: 0 0.5rem;
   }
+  .overview-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+  }
+  
+  .overview-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .overview-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .overview-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
